@@ -1,5 +1,5 @@
 import DrumPad from './components/DrumPad';
-import {useRef, useState} from "react";
+import {useState} from "react";
 
 const padItems = [
     {
