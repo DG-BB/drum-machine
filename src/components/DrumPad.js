@@ -1,5 +1,4 @@
 const {Component} = require("react");
-const App = require('../App');
 
 export default class DrumPad extends Component {
 
