@@ -1,0 +1,2 @@
+body{background-color:gray}#drum-machine{margin:auto;width:230px}.drum-pad{background-color:#ffebcd;border-bottom:1px solid #000;border-right:1px solid #000;cursor:grab;float:left;height:75px;justify-content:center;text-align:center;width:75px}.drum-pad:first-child{border-left:1px solid #000}#display{background-color:#545454;border:1px solid #000;height:50px;justify-content:center}#display p{color:#fff;font-size:13px;padding:4px;text-align:center;width:100%}
+/*# sourceMappingURL=main.6dd07287.css.map*/
