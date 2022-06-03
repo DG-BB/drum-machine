@@ -27,7 +27,7 @@ const padItems = [
         name: "Open-HH",
         audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
     }, {
-        key: 'Y',
+        key: 'Z',
         name: "Kick-n'-Hat",
         audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
     }, {
@@ -45,36 +45,14 @@ function App() {
     const [displayText, setDisplayText] = useState('');
 
     return (
-        <div className="drum-machine">
-            <div className="display">
-                <p>{displayText}</p>
+        <div id="drum-machine">
+            <div id="display">
+                {displayText}
             </div>
 
             <div>
-                <div style={{display: 'flex'}}>
-                    <DrumPad key={padItems[0].key} padItem={padItems[0]}
-                             update={() => setDisplayText(padItems[0].name)}/>
-                    <DrumPad key={padItems[1].key} padItem={padItems[1]}
-                             update={() => setDisplayText(padItems[1].name)}/>
-                    <DrumPad key={padItems[2].key} padItem={padItems[2]}
-                             update={() => setDisplayText(padItems[2].name)}/>
-                </div>
-                <div style={{display: 'flex'}}>
-                    <DrumPad key={padItems[3].key} padItem={padItems[3]}
-                             update={() => setDisplayText(padItems[3].name)}/>
-                    <DrumPad key={padItems[4].key} padItem={padItems[4]}
-                             update={() => setDisplayText(padItems[4].name)}/>
-                    <DrumPad key={padItems[5].key} padItem={padItems[5]}
-                             update={() => setDisplayText(padItems[5].name)}/>
-                </div>
-                <div style={{display: 'flex'}}>
-                    <DrumPad key={padItems[6].key} padItem={padItems[6]}
-                             update={() => setDisplayText(padItems[6].name)}/>
-                    <DrumPad key={padItems[7].key} padItem={padItems[7]}
-                             update={() => setDisplayText(padItems[7].name)}/>
-                    <DrumPad key={padItems[8].key} padItem={padItems[8]}
-                             update={() => setDisplayText(padItems[8].name)}/>
-                </div>
+                {padItems.map(item => (<DrumPad key={item.key} padItem={item}
+                                                update={() => setDisplayText(item.name)}/>))}
             </div>
         </div>
     );

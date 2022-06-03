@@ -17,7 +17,9 @@ export default class DrumPad extends Component {
     }
 
     playSound() {
-        document.getElementById("audio_" + this.props.padItem.key).play();
+        const sound = document.getElementById(this.props.padItem.key);
+        sound.currentTime = 0;
+        sound.play();
         this.props.update();
     }
 
@@ -34,11 +36,9 @@ export default class DrumPad extends Component {
 
     render() {
         return (
-            <div className="drum-pad" onClick={this.handleClick} id={"pad_" + this.props.padItem.key}>
-                <p>{this.props.padItem.key}</p>
-                <audio id={"audio_" + this.props.padItem.key} preload="auto">
-                    <source src={this.props.padItem.audioUrl} type="audio/mpeg"></source>
-                </audio>
+            <div className="drum-pad" onClick={this.handleClick} id={"pad" + this.props.padItem.key}>
+                <audio src={this.props.padItem.audioUrl} className="clip" id={this.props.padItem.key} preload="auto"></audio>
+                {this.props.padItem.key}
             </div>
         );
     }

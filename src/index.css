@@ -2,8 +2,9 @@ body {
     background-color: gray;
 }
 
-.drum-machine {
-    width: 215px;
+#drum-machine {
+    width: 230px;
+    margin: auto;
 }
 
 .drum-pad {
@@ -15,14 +16,14 @@ body {
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     cursor: grab;
+    float: left;
 }
 
 .drum-pad:first-child {
     border-left: 1px solid black;
 }
 
-.display {
-    width: 213px;
+#display {
     height: 50px;
     background-color: #545454;
     border: 1px solid black;
@@ -30,7 +31,7 @@ body {
 
 }
 
-.display p {
+#display p {
     padding: 4px;
     color: white;
     font-size: 13px;
